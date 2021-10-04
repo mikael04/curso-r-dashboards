@@ -1,0 +1,14 @@
+name: Exercicio_010
+title: Exercicio_010
+username:
+account: mikael04
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4795853
+bundleId: 5104164
+url: https://mikael04.shinyapps.io/Exercicio_010/
+when: 1633387160.16029
+lastSyncTime: 1633387160.1603
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: 011-meu-segundo-app.R|020-inputs-outputs-credito.R|021-inputs-outputs-pokemon.R|022-inputs-outputs-ssp.R|030-sidebarLayout.R|031-navbarPage.R|040-shinydashboard.R|050-ui-reativa-cetesb.R|051-ui-reativa-pokemon.R|052-ui-reativa-ssp.R|060-htmlwidgets.R|061-auth0.R|extra-010-input-output.R|extra-020-input-output.R|extra-021-selecao-multipla.R|extra-022-date-input.R

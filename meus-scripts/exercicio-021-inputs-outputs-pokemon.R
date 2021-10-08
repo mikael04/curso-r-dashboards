@@ -13,18 +13,18 @@ library(plotly)
 library(shinydashboard) # <-- Change this line to: library(semantic.dashboard)
 # library(shinydashboard) # <-- Change this line to: library(semantic.dashboard)
 
-# df <- readRDS("Material-curso-r/dados/pkmn.rds")
-df <- readRDS("../dados/pkmn.rds")
+df <- readRDS("Material-curso-r/dados/pkmn.rds")
+# df <- readRDS("../dados/pkmn.rds")
 
 ui <- dashboardPage(
   dashboardHeader(title = "Basic dashboard"),
   dashboardSidebar(sidebarMenu(
     menuItem(tabName = "home", text = "Filtrar pokemao", icon = icon("home"),
-            shiny::selectInput(inputId = "tipo_1",
-                               label = "Tipo do pkm",
-                               choices = distinct(df, tipo_1),
-                               selectize = T,
-                               multiple = F
+             shiny::selectInput(inputId = "tipo_1",
+                                label = "Tipo do pkm",
+                                choices = distinct(df, tipo_1),
+                                selectize = T,
+                                multiple = F
              ))
   )),
   dashboardBody(
@@ -38,12 +38,12 @@ server <- function(input, output) {
   set.seed(122)
   histdata <- rnorm(500)
   df_aux <- shiny::eventReactive(input$tipo_1, {
-    # browser()
+    browser()
     df |> 
       dplyr::filter(tipo_1 == input$tipo_1)
   })
   output$plot_dispersao <- plotly::renderPlotly({
-    # browser()
+    browser()
     df_ <- df_aux()
     plot <- ggplot2::ggplot(df_, aes(x = ataque, y = defesa)) +
       ggplot2::geom_point(size = 2, shape = 23, fill="lightgreen") +
